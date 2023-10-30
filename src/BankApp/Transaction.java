@@ -1,28 +1,18 @@
 package BankApp;
 
+import java.time.LocalDateTime;
+
 public class Transaction {
     private double amount;
-    private String type;
-    private Date timestamp;
-
-    // Constructor
-    public Transaction(double amount, String type) {
+    private LocalDateTime timestamp;
+    public Transaction(double amount){
         this.amount = amount;
-        this.type = type;
-        this.timestamp = new Date(); // You might want to use a more specific date-time library.
+        this.timestamp = LocalDateTime.now();
     }
-
-    // Getters
-    public double getAmount() {
+    public double getAmount(){
         return amount;
     }
-
-    public String getType() {
-        return type;
-    }
-
-    public Date getTimestamp() {
+    public LocalDateTime getTimestamp(){
         return timestamp;
     }
 }
-
